@@ -1,4 +1,4 @@
-# scan_gabarito_linhas.py
+
 # -*- coding: utf-8 -*-
 """
 Leitura de gabarito de múltipla escolha (A–E) - Versão Otimizada para Mobile/CamScanner

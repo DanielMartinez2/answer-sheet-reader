@@ -6,7 +6,7 @@ import csv
 import cv2
 import argparse
 import sys
-from scan_gabarito_gemini import run   # importa sua função principal
+from scan_gabarito_final import run   # importa sua função principal
 
 def processar_pasta(pasta_input, arquivo_saida="resultados_consolidados.csv"):
     # extensões aceitas
