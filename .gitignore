@@ -39,3 +39,9 @@ resultados_consolidados.csv
 gabaritos_ajustado*.jpg
 gabaritos_ajustado*.jpeg
 gabaritos_ajustado*.png
+
+# Keep public examples in version control
+!examples/
+!examples/input/
+!examples/output/
+!examples/**
