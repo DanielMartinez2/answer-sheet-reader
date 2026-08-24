@@ -1,7 +1,7 @@
 
 # -*- coding: utf-8 -*-
 """
-Leitura de gabarito de múltipla escolha (A–E) - Versão Otimizada para Mobile/CamScanner
+Leitura de gabarito de múltipla escolha (A-E) - Versão Otimizada para Mobile/CamScanner
 Correções Críticas aplicadas:
 1. Remoção de sombras (Normalização de Divisão) no pré-processamento.
 2. Detecção de linhas HORIZONTAIS mais robusta para curvatura da página.
@@ -30,8 +30,9 @@ def remove_shadows(gray):
     diff = 255 - cv2.absdiff(gray, bg_blur)
     
     # 3. Normaliza o resultado para usar todo o espectro 0-255
-    norm_img = cv2.normalize(diff, None, alpha=0, beta=255, 
-                             norm_type=cv2.NORM_MINMAX, dtype=cv2.CV_8UC1)
+    norm_img = np.empty_like(diff)
+    cv2.normalize(diff, norm_img, alpha=0, beta=255,
+                  norm_type=cv2.NORM_MINMAX, dtype=cv2.CV_8UC1)
     return norm_img
 
 
